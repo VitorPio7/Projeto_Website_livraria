@@ -1,0 +1,82 @@
+body {
+  background: linear-gradient(-45deg, #7d0d0d, #b40502, #7d0d0d, #f20707);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background-color: white;
+  width: 50vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2.5fr;
+}
+.cont4 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+}
+.cont2 {
+  background-color: #0d0d0d;
+}
+.cont1 {
+  display: flex;
+  background-color: #f2f2f2;
+  align-items: center;
+  justify-content: center;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+}
+.cont1 > h1 {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.cont2 > p {
+  color: #f2f2f2;
+  text-align: justify;
+  padding: 1rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.7rem;
+}
