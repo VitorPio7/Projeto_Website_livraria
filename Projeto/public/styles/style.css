@@ -10,9 +10,6 @@
   --bs-nav-link-color: white;
   --bs-nav-link-hover-color: grey;
 }
-* {
-  font-family: "Source Sans 3", sans-serif;
-}
 ul li {
   padding: 0 0.5em 0.25em;
   cursor: pointer;
@@ -61,6 +58,7 @@ ul:hover li:hover ~ li:before {
 /*cards*/
 
 .container1 {
+  width: 100vw;
   display: flex;
   flex-direction: row;
   gap: 80px;
@@ -72,6 +70,9 @@ ul:hover li:hover ~ li:before {
 
 .btn-danger {
   --bs-btn-bg: #f20707;
+}
+.card {
+  width: 20rem;
 }
 .card-body {
   /* align-items: center; */
@@ -103,7 +104,7 @@ ul:hover li:hover ~ li:before {
 .container3 {
   background-color: #f2f2f2;
   padding: 14px;
-  width: 99vw;
+  width: 100vw;
   height: 700px;
   display: grid;
   grid-template-columns: 1fr 2.5fr 2.5fr 1fr;
@@ -117,6 +118,7 @@ ul:hover li:hover ~ li:before {
 /*footer*/
 .container4 {
   height: 400px;
+  width: 100vw;
 }
 .caixaDeResposta {
   display: flex;
@@ -166,6 +168,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   height: 300px;
+  width: 100vw;
   background-image: url("../img/ondas.svg");
   background-size: cover;
 }
@@ -179,4 +182,71 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+/*Tablet*/
+
+@media screen and (min-width: 768px) and(max-width:1023px) {
+}
+
+/*Smartphone*/
+
+@media screen and (max-width: 767px) {
+  header {
+    width: 100vw;
+  }
+  .d-flex img {
+    width: 80px;
+    height: 80px;
+  }
+  .carousel-item img {
+    height: 650px;
+  }
+  .carouselExampleCaptions {
+    width: 100vw;
+  }
+  .card {
+    width: 9rem;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .card-text {
+    font-size: 12px;
+  }
+  .detartes img {
+    width: 300px;
+  }
+  .plato img {
+    width: 300px;
+  }
+  form {
+    height: 150px;
+    width: 400px;
+  }
+  form > h2 {
+    font-size: x-large;
+  }
+  #email {
+    width: 220px;
+    height: 30px;
+    border: slategrey;
+    text-align: center;
+  }
+  #button {
+    font-size: small;
+  }
+  .socialMedia h3 {
+    font-size: small;
+  }
+  .logo > p {
+    font-size: small;
+  }
+  footer {
+    height: 130px;
+  }
+  .container2 {
+    height: 700px;
+    width: 100vw;
+  }
 }

@@ -14,7 +14,9 @@ app.use(express.static("public"))
 
 
 app.get("/", (req, res) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {
+
+    });
 })
 
 app.get("/about", (req, res) => {
@@ -35,15 +37,24 @@ app.get("/return", (req, res) => {
 app.post("/newsletter", (req, res) => {
     res.render("index.ejs", {
         email: req.body.email,
-        notification: notifier.notify({
+    });
+    if (req.body.email) {
+        notifier.notify({
             title: 'Congradulation!',
             message: "We've just received your email!",
             icon: path.join(__dirname, 'public/img/logo.png'),
             sound: true,
             wait: true
         })
-    });
-
+    } else {
+        notifier.notify({
+            title: 'Failed!!',
+            message: "We've NOT received your email!",
+            icon: path.join(__dirname, 'public/img/logo.png'),
+            sound: true,
+            wait: true
+        })
+    }
 })
 
 app.listen(3000, () => {
