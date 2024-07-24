@@ -19,16 +19,21 @@
     <title>Faqs</title>
   </head>
   <body>
+    <a href="/return"> <img src="img/return.svg" alt="return" /></a>
+    <% if(locals.n){ %>
+    <h1 class="frase">Pergunta foi enviada <%= n %></h1>
+
+    <% } %>
     <div class="container">
       <div class="cont1"><p>Send your question</p></div>
       <div class="cont2">
-        <form action="/Post" method="post">
+        <form action="/submit" method="post">
           <label for="name">Name</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" required />
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" required />
           <label for="question">Question</label>
-          <input type="text" name="question" id="question" />
+          <input type="text" name="question" id="question" required />
           <input type="submit" value="Send" />
         </form>
       </div>

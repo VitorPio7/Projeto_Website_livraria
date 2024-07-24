@@ -10,9 +10,12 @@
   "author": "vitor pio",
   "license": "ISC",
   "dependencies": {
+    "alert": "^6.0.2",
     "body-parser": "^1.20.2",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "nodemon": "^3.1.4"
+    "node-notifier": "^10.0.1",
+    "nodemon": "^3.1.4",
+    "popups": "^1.1.3"
   }
 }

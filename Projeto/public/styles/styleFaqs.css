@@ -36,6 +36,31 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 3rem;
   font-weight: 700;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 5px auto;
+  letter-spacing: 0.05em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 .cont2 {
   background-color: #f2f2f2;
@@ -54,6 +79,10 @@ input {
   width: 25rem;
   border-radius: 20px;
   border: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 1rem;
+  text-align: center;
 }
 label {
   margin-top: 0.8rem;
@@ -66,9 +95,14 @@ input[type="submit"] {
   font-size: 1.5rem;
   width: 10rem;
   border: none;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   height: 2.5rem;
   background-color: #ff9900;
   margin: none;
   cursor: pointer;
+}
+.frase {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: #f2f2f2;
 }

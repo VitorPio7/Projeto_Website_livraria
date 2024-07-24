@@ -4,12 +4,12 @@
   data-aos-anchor-placement="top-bottom"
   data-aos-duration="20000"
 >
-  <div class="caixaDeResposta">
-    <form action="/mensagem" method="post">
+  <div class="caixaDeResposta" id="cxResposta">
+    <form action="/newsletter" method="post">
       <h2>Subscribe to our Newsletter</h2>
       <p>get the latest update about books.</p>
       <div class="input">
-        <input type="text" name="email" id="email" />
+        <input type="text" name="email" id="email" required />
         <input type="submit" value="Subscribe here" id="button" />
       </div>
     </form>
@@ -19,6 +19,7 @@
 <footer class="curve">
   <div class="logo"><p>@2024 RedLibrary</p></div>
   <div class="socialMedia">
+    <% if(locals.email){ %> <%= notification %> <% } %>
     <h3>
       <a type="get"
         ><svg
