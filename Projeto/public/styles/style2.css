@@ -80,12 +80,19 @@ body {
   font-optical-sizing: auto;
   line-height: 1.7rem;
 }
-/*Tablet*/
-
-@media screen and (min-width: 768px) and(max-width:1023px) {
-}
 
 /*Smartphone*/
 
 @media screen and (max-width: 767px) {
+  .cont1 h1 {
+    font-size: 28px;
+  }
+  .cont2 > p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .container {
+    width: 600px;
+    height: 600px;
+  }
 }

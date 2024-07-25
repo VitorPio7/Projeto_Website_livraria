@@ -106,12 +106,9 @@ input[type="submit"] {
   text-align: center;
   color: #f2f2f2;
 }
-/*Tablet*/
-
-@media screen and (min-width: 768px) and(max-width:1023px) {
-}
-
 /*Smartphone*/
 
 @media screen and (max-width: 767px) {
+  .container {
+  }
 }
